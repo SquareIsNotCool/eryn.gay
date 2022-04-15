@@ -35,7 +35,7 @@
 		return theme as Theme;
 	}
 
-	let open = true;
+	let open = false;
 
 	let themeButton: HTMLElement;
 	let themePicker: HTMLElement;
