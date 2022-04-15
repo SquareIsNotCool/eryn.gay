@@ -11,6 +11,9 @@ const config = {
                 secondary: colors.blue,
                 gray: colors.zinc,
                 hyperlink: colors.pink[500]
+            },
+            fontFamily: {
+                "comic-sans": ["Comic Sans MS", "Comic Sans", "cursive"]
             }
         }
 	},
