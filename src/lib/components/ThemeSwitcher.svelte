@@ -84,7 +84,7 @@
 <svelte:window on:click={outclick} />
 
 <div
-	class="bg-gray-100 dark:bg-gray-900 rounded shadow-inner h-full relative cursor-pointer transition-[opacity,background-color]"
+	class="bg-primary-50 dark:bg-black dark:bg-opacity-50 text-light-900 dark:text-dark-50 rounded shadow-inner h-full relative cursor-pointer transition-[opacity,background-color]"
 	bind:this={themeButton}
 	on:click={handleOpen}
 	style:opacity="{mounted ? 100 : 0}%"
@@ -102,20 +102,20 @@
 		<div
 			in:fly={{ y: -5, opacity: 0, duration: 500, easing: backOut }}
 			out:fly={{ y: -5, opacity: 0, duration: 250, easing: cubicOut }}
-			class="absolute grid grid-flow-row bg-white dark:bg-gray-700 transition-[background-color,box-shadow] shadow-lg ring-1 ring-gray-200 dark:ring-transparent rounded-md top-14 right-0 w-max p-2 gap-2 cursor-auto"
+			class="absolute grid grid-flow-row bg-white dark:bg-dark-800 transition-colors shadow-lg rounded-md top-14 right-0 w-max p-2 gap-2 cursor-auto"
 			bind:this={themePicker}
 		>
 			{#each themes as theme}
 				<div
-					class="p-1 rounded flex flex-row cursor-pointer items-center gap-1 text-black dark:text-gray-100 transition-colors {currentTheme ===
+					class="p-1 rounded flex flex-row cursor-pointer items-center gap-1 text-lg transition-colors {currentTheme ===
 					theme
-						? 'bg-gray-200 dark:bg-gray-500'
-						: 'hover:bg-gray-100 dark:hover:bg-gray-600'}"
+						? 'bg-primary-100 dark:bg-dark-500'
+						: 'hover:bg-primary-50 dark:hover:bg-dark-600'}"
 					on:click={() => (currentTheme = open ? theme : currentTheme)}
 				>
 					<svelte:component
 						this={icons[theme](currentTheme === theme)}
-						class="p-[1px] text-black dark:text-white transition-colors"
+						class="p-[1px] transition-colors"
 					/>
 					{themeStrings[theme]}
 				</div>
