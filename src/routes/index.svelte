@@ -83,7 +83,11 @@
 				{#if isKonami}
 					<p class="font-comic-sans text-blue-400">Monnie was here</p>
 				{:else}
-					<p class="opacity-50">{status}</p>
+					<p
+						class="text-light-400 dark:text-primary-300 dark:opacity-70 transition-[color,opacity] font-semibold"
+					>
+						{status}
+					</p>
 				{/if}
 			</div>
 			<div class="flex flex-row gap-2">
