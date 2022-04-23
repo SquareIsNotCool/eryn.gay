@@ -5,8 +5,8 @@
 </script>
 
 <div class="w-screen h-screen flex flex-col">
-	<Header />
-	<div class="flex-grow">
+	<!-- <Header /> -->
+	<main class="flex-grow" id="main-content">
 		<slot />
-	</div>
+	</main>
 </div>

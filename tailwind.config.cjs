@@ -9,7 +9,8 @@ const config = {
             colors: {
                 primary: colors.pink,
                 secondary: colors.blue,
-                gray: colors.zinc,
+                light: colors.slate,
+                dark: colors.zinc,
                 hyperlink: colors.pink[500]
             },
             fontFamily: {
