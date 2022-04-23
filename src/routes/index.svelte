@@ -23,6 +23,8 @@
 
 	const pages = ['About Me', 'Portfolio', 'Some 3rd site', 'Some 4th site'];
 
+	const status = 'Certified vibe curator';
+
 	const lanyardStore = useLanyard(discordUserId, lanyardSsr);
 	$: lanyard = $lanyardStore[discordUserId];
 
@@ -60,7 +62,7 @@
 <svelte:window on:keydown={onKeyDown} />
 
 <svelte:head>
-	<title>Pretty based ngl</title>
+	<title>Eryn | {status}</title>
 </svelte:head>
 
 <div
@@ -81,7 +83,7 @@
 				{#if isKonami}
 					<p class="font-comic-sans text-blue-400">Monnie was here</p>
 				{:else}
-					<p class="opacity-50">Certified vibe curator</p>
+					<p class="opacity-50">{status}</p>
 				{/if}
 			</div>
 			<div class="flex flex-row gap-2">
