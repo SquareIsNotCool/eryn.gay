@@ -3,10 +3,9 @@ const colorGradient = require("javascript-color-gradient")
 
 const palette = {
     primary: colors.pink,
-    secondary: colors.blue,
+    secondary: colors.fuchsia,
     light: colors.slate,
     dark: colors.zinc,
-    hyperlink: colors.pink[500]
 }
 
 function getColor(c1, c2) {
@@ -36,6 +35,7 @@ const config = {
 		extend: {
             colors: {
                 ...palette,
+                hyperlink: palette.primary[500],
                 "primary-dark": getColor(palette.dark[900], palette.primary[500]),
                 "secondary-dark": getColor(palette.dark[900], palette.secondary[500])
             },

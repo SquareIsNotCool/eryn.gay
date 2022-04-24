@@ -75,7 +75,7 @@
 </svelte:head>
 
 <div
-	class="grid place-content-center text-center w-full h-full text-light-900 dark:text-primary-300 transition-colors"
+	class="grid place-content-center text-center w-full h-full text-light-900 dark:text-primary-300 transition-[color,transform] scale-[.35] sm:scale-50 md:scale-75 lg:scale-100"
 >
 	<!-- Card -->
 	<div
