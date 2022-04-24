@@ -131,7 +131,7 @@
 						>She/They</span
 					>!
 				</li>
-				<li>My age is a number, which is all I'll tell you :]</li>
+				<li>My age is a number under 18, which is all I'll tell you :]</li>
 				<li>
 					I like to
 					<a href={socials.DeviantArt} target="_blank" class="text-hyperlink underline"
