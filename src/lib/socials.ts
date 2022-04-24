@@ -8,4 +8,6 @@ const socials = {
 	DeviantArt: 'https://www.deviantart.com/perditricks',
 	YouTube: 'https://www.youtube.com/channel/UC3XCE2kPWHAYY-7wRI0-oRw'
 } as const;
-export default Object.fromEntries(Object.entries(socials).sort((a, b) => a[0].localeCompare(b[0])));
+export default Object.fromEntries(
+	Object.entries(socials).sort((a, b) => a[0].localeCompare(b[0]))
+) as Record<keyof typeof socials, string>;

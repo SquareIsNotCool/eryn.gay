@@ -35,7 +35,7 @@ const config = {
 		extend: {
             colors: {
                 ...palette,
-                hyperlink: palette.primary[500],
+                hyperlink: palette.secondary[500],
                 "primary-dark": getColor(palette.dark[900], palette.primary[500]),
                 "secondary-dark": getColor(palette.dark[900], palette.secondary[500])
             },

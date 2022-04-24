@@ -18,6 +18,8 @@
 	import discordUserId from '$lib/discordUserId';
 
 	export let lanyardSsr: Record<string, LanyardPresence>;
+	export let greeting: string;
+	export let status: string;
 
 	const socialsToIcon: Record<keyof typeof socials, any> = {
 		Discord: FaBrandsDiscord,
@@ -29,10 +31,6 @@
 		DeviantArt: CibDeviantart,
 		YouTube: CibYoutube
 	};
-
-	const pages = ['About Me', 'Portfolio', 'Some 3rd site', 'Some 4th site'];
-
-	const status = 'Certified vibe curator';
 
 	const lanyardStore = useLanyard(discordUserId, lanyardSsr);
 	$: lanyard = $lanyardStore[discordUserId];
@@ -79,7 +77,7 @@
 >
 	<!-- Card -->
 	<div
-		class="bg-white dark:bg-dark-800 transition-colors rounded-3xl shadow-xl flex flex-row w-[54em]"
+		class="bg-white dark:bg-dark-800 transition-colors rounded-3xl shadow-xl flex flex-row w-[54em] pointer-events-auto"
 	>
 		<div class="flex flex-col gap-6 p-8 place-items-center">
 			<img
@@ -117,8 +115,40 @@
 			</div>
 		</div>
 		<div class="w-1 h-full bg-primary-50 dark:bg-dark-900 transition-colors" />
-		<div class="grid grid-cols-2 p-8 gap-8 w-full">
-			<p />
+		<div class="p-8 w-11/12 flex flex-col gap-2 text-light-900 dark:text-dark-50 transition-colors">
+			<!-- <h1 class="text-2xl">
+				{greeting}! I'm
+				<span class="text-primary-400 dark:text-primary-300 transition-colors font-bold">Eryn</span
+				>!<br />
+			</h1>
+			<hr class="border-primary-50" />
+			<ul
+				class="text-xl flex flex-col gap-8 text-left list-disc marker:text-secondary-500 dark:marker:text-secondary-400 marker:transition-colors"
+			>
+				<li>
+					I go by <span
+						class="text-primary-400 dark:text-primary-300 transition-colors font-semibold"
+						>She/They</span
+					>!
+				</li>
+				<li>My age is a number, which is all I'll tell you :]</li>
+				<li>
+					I like to
+					<a href={socials.DeviantArt} target="_blank" class="text-hyperlink underline"
+						>draw things</a
+					>
+					and I also sometimes
+					<a href={socials.Twitch} target="_blank" class="text-hyperlink underline"
+						>stream on Twitch</a
+					>!
+					<span class="italic text-light-400 dark:text-dark-400 transition-colors"
+						>You should stop by sometime!</span
+					>
+				</li>
+				<li>I seriously have no clue what to write here</li>
+				<li>The quick brown fox jumps over the lazy dog</li>
+				<li>safdsadasdasd</li>
+			</ul> -->
 		</div>
 	</div>
 </div>

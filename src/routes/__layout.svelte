@@ -12,7 +12,7 @@
 	<div class="absolute top-8 right-8">
 		<ThemeSwitcher />
 	</div>
-	<main class="flex-grow" id="main-content">
+	<main class="flex-grow pointer-events-none" id="main-content">
 		<slot />
 	</main>
 </div>
