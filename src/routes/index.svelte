@@ -9,6 +9,11 @@
 	import CiTwitter from '~icons/ci/twitter';
 	import CibTwitch from '~icons/cib/twitch';
 	import FaBrandsDiscord from '~icons/fa-brands/discord';
+	import CibTiktok from '~icons/cib/tiktok';
+	import CibInstagram from '~icons/cib/instagram';
+	import CibDeviantart from '~icons/cib/deviantart';
+	import CibYoutube from '~icons/cib/youtube';
+
 	import useLanyard, { userIcon, type LanyardPresence } from '$lib/stores/lanyardStore';
 	import discordUserId from '$lib/discordUserId';
 
@@ -18,7 +23,11 @@
 		Discord: FaBrandsDiscord,
 		Twitch: CibTwitch,
 		Twitter: CiTwitter,
-		'Ko-fi': CibKoFi
+		'Ko-fi': CibKoFi,
+		TikTok: CibTiktok,
+		Instagram: CibInstagram,
+		DeviantArt: CibDeviantart,
+		YouTube: CibYoutube
 	};
 
 	const pages = ['About Me', 'Portfolio', 'Some 3rd site', 'Some 4th site'];
@@ -81,7 +90,9 @@
 			<div>
 				<h1 class="text-2xl font-bold">{lanyard.discord_user.username}</h1>
 				{#if isKonami}
-					<p class="font-comic-sans text-blue-400">Monnie was here</p>
+					<p class="font-comic-sans text-blue-400 dark:text-blue-300 transition-colors">
+						Monnie was here
+					</p>
 				{:else}
 					<p
 						class="text-light-400 dark:text-primary-300 dark:opacity-70 transition-[color,opacity] font-semibold"
@@ -90,7 +101,7 @@
 					</p>
 				{/if}
 			</div>
-			<div class="flex flex-row gap-2">
+			<div class="flex flex-row gap-2 flex-wrap justify-center">
 				{#each Object.entries(socials) as [socialName, socialUrl]}
 					<a
 						class="p-3 bg-primary-50 hover:bg-primary-100 dark:bg-dark-700 dark:hover:bg-dark-600 rounded-2xl transition-colors"
@@ -107,13 +118,7 @@
 		</div>
 		<div class="w-1 h-full bg-primary-50 dark:bg-dark-900 transition-colors" />
 		<div class="grid grid-cols-2 p-8 gap-8 w-full">
-			<!-- {#each pages as page}
-				<a
-					href={page.split(' ')[0].toLowerCase()}
-					class="bg-primary-50 hover:bg-primary-100 dark:bg-dark-700 dark:hover:bg-dark-600 rounded-2xl grid place-content-center font-bold text-primary-400 dark:text-dark-900 transition-colors text-xl"
-					>{page}</a
-				>
-			{/each} -->
+			<p />
 		</div>
 	</div>
 </div>
