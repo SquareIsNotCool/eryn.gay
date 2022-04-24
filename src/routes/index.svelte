@@ -83,7 +83,7 @@
 			<img
 				src={userIcon(lanyard, { animated: true, size: 256 })}
 				alt="{lanyard.discord_user.username}' pfp"
-				class="rounded-full w-56 h-56 shadow-lg shadow-primary-200 dark:shadow-dark-900 transition-shadow"
+				class="rounded-full w-56 h-56 shadow-lg shadow-primary-200 dark:shadow-primary-dark-200 transition-shadow"
 			/>
 			<div>
 				<h1 class="text-2xl font-bold">{lanyard.discord_user.username}</h1>
@@ -108,7 +108,7 @@
 					>
 						<svelte:component
 							this={socialsToIcon[socialName]}
-							class="text-2xl text-primary-400 dark:text-primary-300 transition-colors"
+							class="text-2xl text-primary-400 dark:text-primary-400 transition-colors"
 						/>
 					</a>
 				{/each}
@@ -116,7 +116,7 @@
 		</div>
 		<div class="w-1 h-full bg-primary-50 dark:bg-dark-900 transition-colors" />
 		<div class="p-8 w-11/12 flex flex-col gap-2 text-light-900 dark:text-dark-50 transition-colors">
-			<!-- <h1 class="text-2xl">
+			<h1 class="text-2xl">
 				{greeting}! I'm
 				<span class="text-primary-400 dark:text-primary-300 transition-colors font-bold">Eryn</span
 				>!<br />
@@ -148,7 +148,7 @@
 				<li>I seriously have no clue what to write here</li>
 				<li>The quick brown fox jumps over the lazy dog</li>
 				<li>safdsadasdasd</li>
-			</ul> -->
+			</ul>
 		</div>
 	</div>
 </div>

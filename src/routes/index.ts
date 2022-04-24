@@ -7,7 +7,8 @@ const statuses = [
 	'Certified vibe curator',
 	'Caretaker of Axolotls',
 	'Fridge magnet collector',
-	'In a Bubble in space'
+	'In a Bubble in space',
+	'Head empty no thoughts'
 ];
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
